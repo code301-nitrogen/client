@@ -15,9 +15,9 @@ const API_URL = 'http://localhost:3000/api/v1';
 
     Image.fetchImages = (cb) => {
         $.get(`${API_URL}/nasa`)
-        .then(Image.loadAll);
-        //.then(cb)
-        //.fail(console.error);
+        .then(Image.loadAll)
+        .then(cb)
+        .fail(console.error);
     }
 
     Image.loadAll = (data) => {
