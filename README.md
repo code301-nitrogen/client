@@ -33,5 +33,5 @@ As developers, we wish to utilize a third-party API.
 ### STRETCH GOALS
 – Our Education page will have a timeline that will be interactive; information would pop up upon mouseover or click.
 – The ability to randomize the favorite images or turn them into a slideshow of the user and/or the general favorites.
-
+– Add a small grid calendar to our inputs for user to select a date for filtering images.
 
