@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mars Rover Photo App</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>HOME</li>
+            <li>DISCOVER</li>
+            <li>LEARN</li>
+            <li>ABOUT</li>
+            <li>FAVES</li>
+        </ul>
+
+    </nav>
+
+    <main>
+        <section id='photos'>
+            <div id="searchHowTo"></div>
+            <div id="showFavs"></div>
+
+            <div id= "rovers">
+                <label>Rovers</label>
+                <select>
+                    <option value="curiosity">Curiosity</option>
+                    <option value="spirit">Spirit</option>
+                    <option value="opportunity">Opportunity</option>
+                </select>
+            </div>
+
+            <div id= "camera">
+                    <label>Cameras</label>
+                    <select>
+                        <option value="navigation">Navigation</option>
+                        <option value="frontHazard">Front Hazard</option>
+                        <option value="rearHazard">Rear Hazard</option>
+                    </select>
+            </div>
+
+            <div id= "dates">
+                    <label>Date(yyyy-mm-dd)</label>
+                    <input type="text" name ="dateInput" required>
+            </div>
+
+            <button id ="searchButton" type="submit">SEARCH</button>
+
+            <div id="gallery"><!-- this is where images will be appended--></div>
+
+            <form>
+                <label for="userName">Create Name</label>
+                <input type="text" name="userName" required>
+                <button id="saveFavs" type= "submit">SAVE</button>
+            </form>
+        </section>
+
+        <section id="favPhotos">
+            
+
+
+
+
+        </section>
+
+
+
+
+    </main>
+</body>
+</html>
