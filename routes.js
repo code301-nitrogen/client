@@ -1,4 +1,4 @@
-page('/', app.Image.initHomePage);
+page('/', app.imageView.initHomePage);
 
 page('/discover', app.Image.fetchImages, app.imageView.initDiscoverPage);
 
