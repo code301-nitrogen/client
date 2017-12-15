@@ -1,6 +1,6 @@
 page('/', app.imageView.initHomePage);
 
-page('/discover', app.Image.fetchImages, app.imageView.initDiscoverPage);
+page('/discover', app.imageView.initDiscoverPage);
 
 page('/faves', app.imageView.initFavesPage);
 
