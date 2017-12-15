@@ -1,0 +1,1 @@
+page('/discover', app.Image.fetchImages(app.imageView.initDiscoverPage));
