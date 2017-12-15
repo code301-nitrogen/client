@@ -18,11 +18,11 @@
 <body>
     <nav>
         <ul>
-            <li>HOME</li>
-            <li>DISCOVER</li>
-            <li>LEARN</li>
-            <li>ABOUT</li>
-            <li>FAVES</li>
+            <li><a href = "/client">HOME</a></li>
+            <li><a href = "/client/discover">DISCOVER</a></li>
+            <li><a href = "/client/faves">FAVES</a></li>
+            <li><a href = "/client/learn">LEARN</a></li>
+            <li><a href = "/client/about">ABOUT</a></li>
         </ul>
 
     </nav>
@@ -134,8 +134,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="./models/image.js"></script>
     <script src="./views/imageView.js"></script> 
-    <script>
-        app.Image.fetchImages(app.imageView.initDiscoverPage);   
-    </script>
+    <script src="./routes.js"></script>
 </body>
 </html>
