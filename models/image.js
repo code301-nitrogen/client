@@ -23,10 +23,13 @@ const API_URL = 'http://localhost:3000/api/v1';
     Image.loadAll = (data) => {
         Image.all = data.map(obj => new Image(obj));
         console.log(Image.all);
+        //app.imageView.initDiscoverPage();
     }
 
     Image.prototype.toHtml = function () {
         $('#gallery').append();
+        const template = Handlebars.compile($('#image-template').text());
+        return template(this);
     }
     module.Image = Image;
 })(app);

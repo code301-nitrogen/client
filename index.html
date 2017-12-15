@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mars Rover Photo App</title>
+
+    <script id = "image-template" type="text/x-handlebars-template">
+        
+        <article class="clearfix" data-image="{{id}}">
+            <img src="{{url}}" alt="image of mars">
+            <input id="I{{id}}" type="checkbox">
+        </article>
+    </script>
+        
 </head>
 <body>
     <nav>
@@ -19,6 +28,10 @@
     </nav>
 
     <main>
+        <section id="home">
+
+        </section>
+
         <section id='photos'>
             <div id="searchHowTo"></div>
             <div id="showFavs"></div>
@@ -104,6 +117,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-    <script src="./models/image.js"></script>    
+    <script src="./models/image.js"></script>
+    <script src="./views/imageView.js"></script> 
+    <script>
+        app.Image.fetchImages(app.imageView.initDiscoverPage);   
+    </script>
 </body>
 </html>
