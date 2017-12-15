@@ -14,7 +14,12 @@ const API_URL = 'http://localhost:3000/api/v1';
     Image.all = [];
 
     Image.fetchImages = (cb) => {
-        $.get(`${API_URL}/nasa`)
+        const options = {
+            rover: 'curiosity',
+            camera: 'fhaz',
+            date: '2015-12-13'
+        }
+        $.get(`${API_URL}/nasa`, options)
         .then(Image.loadAll)
         .then(cb)
         .fail(console.error);
