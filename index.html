@@ -29,37 +29,42 @@
 
     <main>
         <section id="home">
+            <p>This is a test, this is ONLY a test....</p>
 
         </section>
 
-        <section id='photos'>
+        <section id="photos">
+
             <div id="searchHowTo"></div>
-            <div id="showFavs"></div>
-
-            <div id= "rovers">
-                <label>Rovers</label>
-                <select>
-                    <option value="curiosity">Curiosity</option>
-                    <option value="spirit">Spirit</option>
-                    <option value="opportunity">Opportunity</option>
-                </select>
-            </div>
-
-            <div id= "camera">
-                    <label>Cameras</label>
-                    <select>
-                        <option value="navigation">Navigation</option>
-                        <option value="frontHazard">Front Hazard</option>
-                        <option value="rearHazard">Rear Hazard</option>
+                <p>This is a test, this is ONLY a test....</p>
+        <fieldset>
+            <form id="dropdowns">
+                <div id= "rovers">
+                    <label>Rovers</label>
+                        <select>
+                            <option value="curiosity">Curiosity</option>
+                            <option value="spirit">Spirit</option>
+                            <option value="opportunity">Opportunity</option>
                     </select>
-            </div>
+                </div>
 
-            <div id= "dates">
+                <div id= "camera">
+                    <label>Cameras</label>
+                        <select>
+                            <option value="navigation">Navigation</option>
+                            <option value="frontHazard">Front Hazard</option>
+                            <option value="rearHazard">Rear Hazard</option>
+                        </select>
+                </div>
+
+                <div id= "dates">
                     <label>Date(yyyy-mm-dd)</label>
-                    <input type="text" name ="dateInput" required>
-            </div>
+                        <input type="text" name ="dateInput" required>
+                </div>
 
-            <button id ="searchButton" type="submit">SEARCH</button>
+                <button id ="searchButton" type="submit">SEARCH</button>
+            </form>
+        </fieldset>
 
             <div id="gallery"><!-- this is where images will be appended--></div>
 
@@ -70,9 +75,11 @@
             </form>
         </section>
 
-        <section id="favPhotos">
-           <div id="userFavs">
-               <form>
+        <section id="favePhotos">
+           <div id="userFaves">
+                <p>This is a test, this is ONLY a test....</p>
+
+               <form id="getFaves">
                    <label for="userName">Your Name</label>
                    <button id="view" type="submit">View</button>
                </form>
@@ -84,6 +91,7 @@
                 </form>                  
             </div> 
         </section>
+
         <section id="learn">
             <h1>All About MARS</h1>
             <!-- <img src=http://id="timeline"/> -->
@@ -102,7 +110,7 @@
                 </div>
             </div>
         </section>
-        <section id="About">
+        <section id="about">
             <h1>"About Team Nitrogen"</h1>
             <div class="team">
                 <p id="Charlie">Charlie</p>
