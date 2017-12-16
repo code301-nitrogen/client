@@ -8,6 +8,16 @@ var app = app || {};
     imageView.initDiscoverPage = (ctx) => {
         $('main section').hide();
         $('#photos').show();
+
+        $('#dropDowns').on('submit', (e) => {
+                e.preventDefault();
+                const object = {
+                    rover: $('#dropDowns select[value="rover"]').value(),
+                    // camera: $('#dropDowns select[name="camera"]').value(),
+                    // date: $('#dropDowns input[name = "dateInput"]').val()
+                };
+            console.log(object);
+        })
     //    app.Image.all.map(image => $('#photos').append(image.toHtml()));
     };
 
