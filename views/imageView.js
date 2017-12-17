@@ -9,13 +9,13 @@ var app = app || {};
         $('main section').hide();
         $('#photos').show();
 
-        $('#dropDowns').on('submit', (e) => {
+        $('#dropdowns').on('submit', (e) => {
                 e.preventDefault();
                 const object = {
-                    rover: $('#dropDowns select[value="rover"]').value(),
-                    // camera: $('#dropDowns select[name="camera"]').value(),
-                    // date: $('#dropDowns input[name = "dateInput"]').val()
-                };
+                    rover: $('#rover option:selected').text(),
+                    camera: $('#camera option:selected').text(),
+                    date: $('#date').val()
+                }
             console.log(object);
         })
     //    app.Image.all.map(image => $('#photos').append(image.toHtml()));
