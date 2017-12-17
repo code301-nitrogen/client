@@ -11,14 +11,9 @@ var app = app || {};
 
         $('#dropdowns').on('submit', (e) => {
                 e.preventDefault();
-                const object = {
-                    rover: $('#rover option:selected').text(),
-                    camera: $('#camera option:selected').text(),
-                    date: $('#date').val()
-                }
-            console.log(object);
+                app.Image.fetchImages();
         })
-    //    app.Image.all.map(image => $('#photos').append(image.toHtml()));
+       app.Image.all.map(image => $('#photos').append(image.toHtml()));
     };
 
     imageView.initHomePage = () => {

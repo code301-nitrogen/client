@@ -14,10 +14,20 @@ const API_URL = 'http://localhost:3000/api/v1';
     Image.all = [];
 
     Image.fetchImages = (cb) => {
+        let camShort = '';
+        if($('#camera option:selected').text() == 'Navigation') {
+            camShort = "navcam";
+        }else if($('#camera option:selected').text() == 'Front Hazard') {
+            camShort = "fhaz";
+        }else{
+            camShort = "rhaz";
+        }
+
+    
         const options = {
-            rover: 'curiosity',
-            camera: 'fhaz',
-            date: '2015-12-13'
+            rover: $('#rover option:selected').text(),
+            camera: camShort,
+            date: $('#date').val()
         }
         $.get(`${API_URL}/nasa`, options)
         .then(Image.loadAll)
@@ -28,7 +38,7 @@ const API_URL = 'http://localhost:3000/api/v1';
     Image.loadAll = (data) => {
         Image.all = data.map(obj => new Image(obj));
         console.log(Image.all);
-        //app.imageView.initDiscoverPage();
+        app.imageView.initDiscoverPage();
     }
 
     Image.prototype.toHtml = function () {
