@@ -22,7 +22,6 @@ const API_URL = 'http://localhost:3000/api/v1';
         }else{
             camShort = "rhaz";
         }
-
     
         const options = {
             rover: $('#rover option:selected').text(),
