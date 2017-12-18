@@ -9,7 +9,7 @@ const API_URL = 'http://localhost:3000/api/v1';
         this.id = obj.id;
         this.rover = obj.rover;
         this.camera = obj.camera;
-        this.url = obj.url;
+        this.url = obj.url; 
 }
     Image.all = [];
 
