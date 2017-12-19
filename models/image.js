@@ -1,7 +1,7 @@
 'use strict';
 var app = app || {};
 
-// const API_URL = 'heroku route';
+// const API_URL = 'https://code-301-mars.herokuapp.com/';
 const API_URL = 'http://localhost:3000/api/v1';
 
 (function (module) {
@@ -9,18 +9,18 @@ const API_URL = 'http://localhost:3000/api/v1';
         this.id = obj.id;
         this.rover = obj.rover;
         this.camera = obj.camera;
-        this.url = obj.url;
+        this.url = obj.url; 
 }
     Image.all = [];
 
     Image.fetchImages = (cb) => {
         let camShort = '';
         if($('#camera option:selected').text() == 'Navigation') {
-            camShort = "navcam";
+            camShort = "NAVCAM";
         }else if($('#camera option:selected').text() == 'Front Hazard') {
-            camShort = "fhaz";
+            camShort = "FHAZ";
         }else{
-            camShort = "rhaz";
+            camShort = "RHAZ";
         }
     
         const options = {
