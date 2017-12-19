@@ -58,14 +58,49 @@
                 </div>
 
                 <div id= "dates">
-                    <label>Date(yyyy-mm-dd)</label>
-                        <input id="date" type="text" name ="dateInput" required>
+                    <label>Date</label>
+                        <select id="date">
+                            <!-- <input id="date" type="text" name ="dateInput" required> -->
+                            <option value="dateone">2005-07-31</option>
+                            <option value="datetwo">2016-04-30</option>
+                            <option value="datethree">2017-07-05</option>
+                        </select>
+                        
                 </div>
 
                 <button id ="searchButton" type="submit">SEARCH</button>
             </form>
         </fieldset>
-
+        <!-- <div class="container">
+            <h2>Discover Mars</h2>
+            <p>View images</p>
+                                              
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="#">Spirit</a></li>
+                <li><a tabindex="-1" href="#">Curiosity</a></li>
+                <li><a tabindex="-1" href="#">Opportunity</a></li>
+                <li class="dropdown-submenu">
+                  <a class="test" tabindex="-1" href="#">Cameras <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="#">Navigator</a></li>
+                    <li><a tabindex="-1" href="#">Rear View</a></li>
+                    <li><a tabindex="-1" href="#">Front View</a></li>
+                    <li class="dropdown-submenu">
+                      <a class="test" href="#">Dates <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">2005-07-31</a></li>
+                        <li><a href="#">2016-04-30</a></li>
+                        <li><a href="#">2017-07-05</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div> -->
             <div id="gallery"><!-- this is where images will be appended--></div>
 
             <form id="username">
@@ -129,6 +164,13 @@
 
 
     </main>
+    <!-- $(document).ready(function(){
+        $('.dropdown-submenu a.test').on("click", function(e){
+          $(this).next('ul').toggle();
+          e.stopPropagation();
+          e.preventDefault();
+        });
+      }); -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
