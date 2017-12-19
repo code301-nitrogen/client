@@ -21,15 +21,14 @@ var app = app || {};
         const img_id = $(this).find('img').attr('id');
         const img_num = img_id.slice(1);
         const src = $(this).find('img').attr('src');
-        console.log(img_num);
-        console.log(img_id);
-        console.log(src);
-        // const image = {
-        //     image_id:
-        //     rover: rover,
-        //     camera: 
-        //     url:
-        //     user:  
+        
+        const image = {
+            image_id: img_num,
+            rover: rover,
+            camera: $('#camera option:selected').text(),
+            url: src,
+            user: $('#user').val()
+        }
     });
     
     
