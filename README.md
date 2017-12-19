@@ -35,3 +35,16 @@ As developers, we wish to utilize a third-party API.
 – The ability to randomize the favorite images or turn them into a slideshow of the user and/or the general favorites.
 – Add a small grid calendar to our inputs for user to select a date for filtering images.
 
+
+#### STEPS
+To add the tables to another local repo: 
+    - Do a sql:dump from the locally created database (create a text file with the data)
+    - Then sql:load into the other local repo
+
+Create a Heroku app (this will store the persistent data for our users): 
+    – Create a new app
+    – Add a databse
+    – Do this: heroku pg:push mylocaldb (name) DATABASE_URL --app your-app-name
+    – Connect heroku with postgres: heroku pg:psql --app your-app-name
+    – Use postgresql commands to check tables and data
+
