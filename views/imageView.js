@@ -17,6 +17,7 @@ var app = app || {};
     
        $('.favImage').on('submit', function (event) {
         event.preventDefault();
+        
         const rover = $('#rover option:selected').text();
         const img_id = $(this).find('img').attr('id');
         const img_num = img_id.slice(1);
@@ -29,6 +30,10 @@ var app = app || {};
             url: src,
             user: $('#user').val()
         }
+        
+        
+        // app.Image.saveImage();
+       
     });
     
     

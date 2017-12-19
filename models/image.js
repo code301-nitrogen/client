@@ -41,7 +41,20 @@ const API_URL = 'http://localhost:3000/api/v1';
     }
 
     Image.saveImage = () =>{
+        const rover = $('#rover option:selected').text();
+        const img_id = $(this).find('img').attr('id');
+        const img_num = img_id.slice(1);
+        const src = $(this).find('img').attr('src');
         
+
+        $.post(`${API_URL}/save` , {
+            image_id: img_num,
+            rover: rover,
+            camera: $('#camera option:selected').text(),
+            url: src,
+            user: $('#user').val()
+
+        })
 
     }
 
