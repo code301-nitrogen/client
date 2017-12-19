@@ -40,6 +40,11 @@ const API_URL = 'http://localhost:3000/api/v1';
         app.imageView.initDiscoverPage();
     }
 
+    Image.saveImage = () =>{
+        
+
+    }
+
     Image.prototype.toHtml = function () {
         $('#gallery').append();
         const template = Handlebars.compile($('#image-template').text());

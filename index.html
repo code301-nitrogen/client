@@ -7,11 +7,12 @@
     <title>Mars Rover Photo App</title>
 
     <script id = "image-template" type="text/x-handlebars-template">
-        
+        <form class= "favImage">
         <article class="clearfix" data-image="{{id}}">
-            <img src="{{url}}" alt="image of mars">
-            <input id="I{{id}}" type="checkbox">
+            <img id="I{{id}}" src="{{url}}" alt="image of mars">
+            <input  class = "saveImage" type="submit">
         </article>
+        </form>
     </script>
         
 </head>
