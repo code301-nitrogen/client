@@ -1,0 +1,12 @@
+    /* Learn page styling */
+    #learn p#question {
+        font-family: 'Roboto', sans-serif;
+        font-style: bold;
+        font-size: 14px;
+        }
+
+            /* Learn page styling */
+#learn p#answer {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    }

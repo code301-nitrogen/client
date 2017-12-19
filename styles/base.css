@@ -1,13 +1,31 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
     background-color: rgb(74, 98, 163);
 }
 
-a {
-    color: rgb(251, 153, 76);
-}
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.5em;
+} 
 
-a:hover {
-    color: rgb(124, 56, 29);
-}
+a {
+    text-decoration: none;
+    color: rgb(251, 153, 76);
+    display: block;
+  }
+   
+ a:hover {
+    color: rgb(228, 53, 9);
+  }
+   
+a.active {
+    color: rgb(251, 153, 76);
+    cursor: default;
+  }
+
+
+
+  img {
+
+  }
