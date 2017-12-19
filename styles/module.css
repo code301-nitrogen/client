@@ -1,0 +1,81 @@
+/* Navigation module */
+
+.nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0px auto;
+    background-color: #000000;
+  }
+
+.nav li {
+    display: inline-block;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1em;
+    line-height: 40px;
+    height: 40px;
+    padding: 5px 10px;
+  }
+   
+.nav a {
+    text-decoration: none;
+    color: rgb(251, 153, 76);
+    display: block;
+  }
+   
+.nav a:hover {
+    color: rgb(228, 53, 9);
+  }
+   
+.nav a.active {
+    color: rgb(251, 153, 76);
+    cursor: default;
+  }
+
+
+/* Container module */
+
+.flex-container {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+    align-items: flex-start;
+    }
+
+.flex-item:nth-child(1) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(2) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(3) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(4) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(5) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(6) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
