@@ -10,8 +10,8 @@
 
 .nav li {
     display: inline-block;
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 1em;
+    font-family: 'Carter+One', cursive;
+    font-size: 1.25em;
     line-height: 40px;
     height: 40px;
     padding: 5px 10px;
@@ -34,71 +34,27 @@
 
 
 /* Container module for Gallery */
-/* 
-.flex-container {
-    display: inline-flex;
-    flex-direction: row;
+ 
+#gallery-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: space-between;
-    align-items: flex-start;
-    }
-
-.flex-item:nth-child(1) {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-    }
-
-.flex-item:nth-child(2) {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-    }
-
-.flex-item:nth-child(3) {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-    }
-
-.flex-item:nth-child(4) {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-    }
-
-.flex-item:nth-child(5) {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-    }
-
-.flex-item:nth-child(6) {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-    } */
-    #gallery-wrapper {
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        padding: 40px 40px 100px 40px;
+    padding: 40px 40px 100px 40px;
     }
     
-    .imageBlock {
-        display: block;
-        position: relative;
-        width: 25%;
-        height: 200px;
-        margin: 20px 0;
-        padding: 40px;
-        background-position: center;
-        background-size: cover;
-        text-align: center;
-        border-radius: 20px;
-        transition: box-shadow .3s ease-in-out;
+.imageBlock {
+    display: block;
+    position: relative;
+    width: 25%;
+    height: 200px;
+    margin: 20px 0;
+    padding: 40px;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    border-radius: 20px;
+    transition: box-shadow .3s ease-in-out;
     }
 /* LEARN page module     */
 
@@ -110,7 +66,7 @@ div.faq_container {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    height: 1000px;
+    height: 2000px;
     padding-top: 100px;
     padding-left: 150px;
     }
