@@ -3,6 +3,11 @@
     
 }
 
+#learn {
+    background-image: url('https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_05292015.jpg');
+    background-position: center top;
+    background-repeat: repeat;
+}
 
 footer{
     width: 100%;
