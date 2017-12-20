@@ -60,25 +60,23 @@
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
     justify-content: space-around;
     padding: 40px;
     /* align-items: flex-start; */
     }
     
-    .imageBlock {
+    .imageBlock form {
         display: block;
         position: relative;
-        width: 25%;
-        height: 200px;
         margin: 20px 0;
-        padding: 40px;
+        /* padding: 40px; */
         /* background-position: center; */
         background-size: cover;
         background-color: #000000;
         border-radius: 20px;
         border: 2px solid rgb(74,98,163);
         transition: box-shadow .3s ease-in-out;
+        overflow: hidden;
 }
 
 /* Container module for Favorites */
@@ -94,10 +92,8 @@
 .imageBlock {
     display: block;
     position: relative;
-    width: 25%;
-    height: 200px;
     margin: 20px 0;
-    padding: 40px;
+    /* padding: 40px; */
     background-position: center;
     background-size: cover;
     text-align: center;
