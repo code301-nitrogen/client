@@ -36,9 +36,13 @@ const API_URL = 'http://localhost:3000/api/v1';
     }
 
     Image.fetchFaves = () =>{
+        
         Image.all = [];
-        $.get(`${API_URL}/favorites`)
-        .then(Image.loadAll)
+        const user = {
+            user: $('#userInput').val()
+        }
+        $.get(`${API_URL}/favorites`, user)
+        .then(Image.loadFaves)
         .fail(console.error);
         
         console.log("this is in fetchFaves", Image.all);
@@ -48,38 +52,23 @@ const API_URL = 'http://localhost:3000/api/v1';
         
     }
     Image.loadFaves = (data) => {
-        Image.faves = data.map(obj => new Image(obj));
-        console.log(ImageFaves.all);
-        app.Image.faves.map(image => $('#favorites-wrapper').append(image.toHtml()));
+        Image.all = data.map(obj => new Image(obj));
+        console.log('this is in loadFaves', data);
+        console.log('this is image.all in loadFaves', Image.all)
+        $('#favorites-wrapper').empty();
+        app.Image.all.map(image => $('#favorites-wrapper').append(image.toHtml()));
+ 
     }
 
     Image.loadAll = (data) => {
         Image.all = data.map(obj => new Image(obj));
-        console.log(Image.all);
+        console.log('this is in loadAll', Image.all);
         app.imageView.append();
         Image.all = [];
-        
-        
-        // app.imageView.initDiscoverPage();
     }
 
     Image.saveImage = (image) =>{
-        // const rover = $('#rover option:selected').text();
-        // const img_id = $(this).find('img').attr('id');
-        // const img_num = img_id.slice(1);
-        // const src = $(this).find('img').attr('src');
-        
-
         $.post(`${API_URL}/favorites`, image) 
-        // {
-        //     image_id: img_num,
-        //     rover: rover,
-        //     camera: $('#camera option:selected').text(),
-        //     url: src,
-        //     user: $('#user').val()
-
-        // })
-
     }
 
     Image.prototype.toHtml = function () {
