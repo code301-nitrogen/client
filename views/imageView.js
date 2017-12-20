@@ -30,9 +30,10 @@ var app = app || {};
             url: src,
             user: $('#user').val()
         }
+
         
         
-        // app.Image.saveImage();
+        app.Image.saveImage(image);
        
     });
     
