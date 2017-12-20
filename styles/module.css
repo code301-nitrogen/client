@@ -11,7 +11,9 @@
 .nav li {
     display: inline-block;
     font-family: 'Carter One', cursive;
+
     font-size: 1.25em;
+
     line-height: 40px;
     height: 40px;
     padding: 5px 10px;
@@ -33,33 +35,56 @@
     }
 
 
+/* Container module for Search form */
+
+#dropdowns {
+    display:block;
+    block-size: 40%;
+    background-color: rgb(251, 153, 76);
+    color: rgb(74,98,163);
+    border: 1px solid #000000;
+    float: left;
+    font-size: 1.3em;
+    font-weight:bold;
+    padding:50px;
+}
+
+#rovers, #camera, #dates, #searchButton {
+    text-align: right;
+    padding-bottom: 5px;
+}
+
+/* Container module for Gallery */
+
 
 /* Container module for Gallery */ 
 
-    #gallery-wrapper {
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        padding: 40px 40px 100px 40px;
+
+#gallery-container {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: space-around;
+    padding: 40px;
+    /* align-items: flex-start; */
     }
     
-    .imageBlock {
+    .gallery-item {
         display: block;
         position: relative;
         width: 25%;
         height: 200px;
         margin: 20px 0;
         padding: 40px;
-        background-position: center;
+        /* background-position: center; */
         background-size: cover;
-        text-align: center;
+        background-color: #000000;
         border-radius: 20px;
+        border: 2px solid rgb(74,98,163);
         transition: box-shadow .3s ease-in-out;
-    }
-
-    /* Container module for Favorites */
-
+}
+/* Container module for Favorites */
     #favorites-wrapper {
         position: relative;
         display: flex;
@@ -81,7 +106,10 @@
     text-align: center;
     border-radius: 20px;
     transition: box-shadow .3s ease-in-out;
+
     }
+
+
 /* LEARN page module     */
 
 div.faq_container {

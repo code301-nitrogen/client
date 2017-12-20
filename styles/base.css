@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #000000;
-    
+    background-color: #000;
+
 }
 
 h1 {
@@ -11,7 +11,7 @@ h1 {
 
     font-size: 2.3em;
     color: rgb(228, 53, 9);
-    margin: 0;
+    margin: 10px 0;
     padding-top: 50px;
     padding-left: 100px;
     position: absolute;
@@ -35,6 +35,7 @@ h3 {
 p {
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
+    color: #fff;
 }
 
 a {

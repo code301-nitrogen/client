@@ -25,7 +25,7 @@
         
 </head>
 <body>
-    <div class="nav">
+    <nav class="nav">
         <ul>
             <li class="home"><a href="/client">HOME</a></li>
             <li class="discover"><a href="/client/discover">DISCOVER</a></li>
@@ -48,12 +48,14 @@
 
         <section id="photos">
 
-            <div id="searchHowTo"></div>
-                <!--This is a test, this is ONLY a test.... -->
-        <fieldset>
+
+            <div class="searchHowTo"></div>
+                <p>Choose a Mars Rover, a Camera view, and a date (see input dropdowns) and clich the "search" button. You can save images by creating a username, then checking "submit" next to the images you like. Your favorites can be returned on the Favorites page by re-entering your username.</p>
+    
+
             <form id="dropdowns">
-                <div id= "rovers">
-                    <label>Rovers</label>
+                <div id="rovers">
+                    <label id="text">Rovers</label>
                         <select id="rover">
                             <option value="curiosity">Curiosity</option>
                             <option value="spirit">Spirit</option>
@@ -61,8 +63,8 @@
                     </select>
                 </div>
 
-                <div id= "camera">
-                    <label>Cameras</label>
+                <div id="camera">
+                    <label id="text">Cameras</label>
                         <select id="camera">
                             <option value="navigation">Navigation</option>
                             <option value="frontHazard">Front Hazard</option>
@@ -70,22 +72,27 @@
                         </select>
                 </div>
 
-                <div id= "dates">
-                    <label>Date(yyyy-mm-dd)</label>
+                <div id="dates">
+                    <label id="text">Date(yyyy-mm-dd)</label>
                         <input id="date" type="text" name ="dateInput" required>
                 </div>
 
                 <button id ="searchButton" type="submit">SEARCH</button>
             </form>
-        </fieldset>
 
-            <div id="gallery-wrapper" class="imageBlock"> <!-- this is where images will be appended--> </div>
-
-            
-            <label for="username">Create a username to save your favorite images.</label>
-            <input id = "user" type="text" name="username" required>
-            
-          
+            <div id="username">
+                <label for="username"><p>Create a username to save your favorite images.</p></label>
+                    <input id = "user" type="text" name="username" required>
+            </div>            
+            <div id="gallery-container"> <!-- this is where images will be appended--> 
+<!--                
+                <div class="gallery-item"></div>
+                <div class="gallery-item"><div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>-->
+            </div>           
         </section>
 
         <section id="favePhotos">
@@ -107,33 +114,37 @@
             <div class="faq_container">
                 <div class="faq">
                     <p id="question">How long is one Mars year?</p>
-                    <p id="answer">A Mars DAY is called a sol.  One Mars sol is 24 hrs, 39 min and 35.244 seconds.  One Mars YEAR is 687 Earth days or 1.9 Earth years.</p>
+                    <p id="answer">A Mars <i>day</i> is called a sol. One Mars sol is 24 hours, 39 minutes and 35.244 seconds. One Mars <i>year</i> is 687 Earth days or 1.9 Earth years.</p>
                     <p id="question">What is the temperature on Mars?</p>
                     <p id="answer">The surface temperature of Mars is -153 to 20 degrees Celsius</p>
                     <p id="question">Does Mars have a moon?</p>
-                    <p id="answer">Earth has one moon, but Mars has two.  Their names are Phobos and Deimos.</p>
+                    <p id="answer">Earth has one moon, but Mars has two. Their names are Phobos and Deimos.</p>
                     <p id="question">Does Mars have mountains?</p>
-                    <p id="answer">Yes!  Mars is the home of the tallest mountain in the Solar System, Olympus Mons.</p>
+                    <p id="answer">Yes! Mars is the home of the tallest mountain in the Solar System, Olympus Mons.</p>
                     <p id="question">When was Mars first discovered?</p>
-                    <p id="answer">Mars was first discovered by Egyptian astronomers in 2nd millineum BC.  (Between 2000BC  and 1001 BC).</p>
+                    <p id="answer">Mars was first discovered by Egyptian astronomers in 2nd millineum BC (between 2000 BC and 1001 BC).</p>
                     <p id="question">How many missions have there been to Mars?</p>
-                    <p id="answer">There have been over 40 missions to Mars.  Only 18 have been successful.</p>
+                    <p id="answer">There have been over 40 missions to Mars. Only 18 have been successful.</p>
                     <p id="question">What's something that is unique about the Mars rover?</p>
                     <p id="answer">Lasers! On top of Curiosity’s “neck and head” is the ChemCam, which contains a laser capable of vaporizing items found on the Martian landscape — like rocks, soil, solids (or Martians) — from a distance of up to 23 feet. The vaporized substance is then analyzed to see if it is worth further study. ChemCam will help NASA “characterize” the geology of Mars, check for evidence of past habitability, assess the “biological potential” of parts of Mars, and determine whether or not the soil of Mars is toxic to Earthlings.</p>
                     <p id="question">Is the Mars rover as fast as a jet?</p>
-                    <p id="answer">Nooooooo. Curiosity will have an average speed of between 0.00018 mph and 0.00073 mph. (1 1/2 to 6 miles a YEAR.) Even on a long day, Curiosity will only travel about 600 ft.</p>
+                    <p id="answer">Nooooooo. Curiosity will have an average speed of between 0.00018 mph and 0.00073 mph (1.5 to 6 miles a year). Even on a long day, Curiosity will only travel about 600 feet.</p>
                     <p id="question">Is Curiosity powerful?</p>
-                    <p id="answer">Yes and no. The iPhone in your pocket has at least 4 times the computing power of Curiosity, which packs a mere 200MHz CPU, to iPhones 800MHz CPU. Further, Curiosity packs just 256MB of RAM, and 2GB of on-board storage space. The iPhone has 512MB of RAM and up to 64GB of storage. However, Curiosity has multiple computers in case one breaks, all of which are capable of withstanding massive amounts of radiation an iPhone would not survive.</p>
-                    <p id="question">"How did Curiosity get to Mars in the first place?"></p>
-                    <p id="answer">Curiosity has a rough journey to get to Mars and there is no guarantee it will arrive.  Below is a video of it's hard journey to Mars.</p>
+
+                    <p id="answer">Yes and no. The iPhone in your pocket has at least 4 times the computing power of Curiosity, which packs a mere 200MHz CPU, to the iPhone's 800MHz CPU. Further, Curiosity packs just 256MB of RAM and 2GB of on-board storage space. The iPhone has 512MB of RAM and up to 64GB of storage. However, Curiosity has multiple computers in case one breaks, all of which are capable of withstanding massive amounts of radiation an iPhone would not survive.</p>
+                    <p id="question">How did Curiosity get to Mars in the first place?</p>
+                    <p id="question">Curiosity had a rough journey to get to Mars and there was never a guarantee it would arrive. Below is a video of its journey to Mars.</p>
+
+                   
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/uxVVgBAosqg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
                     <p id="question">Does Curiosity have a birthday?</p>
-                    <p id="answer">Yes. Its birthday is on August 5, 2012.  For it's 1st Birthday, it sang itself a lonely birthday song.  Millions of Earthlings were sad Curiosity was all alone.  However, Curiosity runs on a nuclear battery that turns heat into electricity and it will eventually die.  In the scientific world, there is no value in songs, so it's vibration unit has been reprogrammed for scientific data collection.  If you would like to hear it sing Happy Birthday, watch the video below.</p>
+                    <p id="answer">Yes. Its birthday was August 5, 2012. For its first Birthday, Curiosity sang itself a lonely happy birthday song. Millions of Earthlings were sad that Curiosity was all alone. However, Curiosity runs on a nuclear battery that turns heat into electricity, and the rover will eventually die. In the scientific world, there is no value in songs, so its vibration unit has been reprogrammed for scientific data collection. If you would like to hear Curiosity sing <i>Happy Birthday</i>, watch the video below.</p>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/h2I8AoB1xgU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
         <section id="about">
+
             <h2>Team Nitrogen</h1>
                 <div class="bio-wrapper">
                     <h3>Charlie Heiner</h2>
@@ -159,15 +170,14 @@
                     <p id="bio">I enjoy warping time and space while learning to speak in code. Although not an astronaut, I watched two space shuttle launches in person. I almost applied to the program to colonize Mars, but leaving behind my two teens, friends and family and never returning to Earth was the dealbreaker.  In my free time, I take photos, make jewelry and hang out with my kids, where we often sit and watch the Universe.</p>
                 </div>
 
+
         </section>
 
-        <footer>
+    </main>
+    <footer>
             <p>&copy 2017 | All Rights Reserved | Team Nitrogen | Mars app</p>
         </footer>
-
-
-
-    </main>
+        
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
