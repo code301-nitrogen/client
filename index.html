@@ -4,41 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Carter+One|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="styles/vendor/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/module.css">
+    <link rel="stylesheet" href="styles/state.css">
+    <link rel="stylesheet" href="styles/theme.css">
+
     <title>Mars Rover Photo App</title>
 
     <script id = "image-template" type="text/x-handlebars-template">
-        
+        <form class= "favImage">
         <article class="clearfix" data-image="{{id}}">
-            <img src="{{url}}" alt="image of mars">
-            <input id="I{{id}}" type="checkbox">
+            <img id="I{{id}}" src="{{url}}" alt="image of mars">
+            <input  class = "saveImage" type="submit">
         </article>
+        </form>
     </script>
         
 </head>
 <body>
-    <nav>
+    <div class="nav">
         <ul>
-            <li><a href = "/client">HOME</a></li>
-            <li><a href = "/client/discover">DISCOVER</a></li>
-            <li><a href = "/client/faves">FAVES</a></li>
-            <li><a href = "/client/learn">LEARN</a></li>
-            <li><a href = "/client/about">ABOUT</a></li>
+            <li class="home"><a href="/client">HOME</a></li>
+            <li class="discover"><a href="/client/discover">DISCOVER</a></li>
+            <li class="faves"><a href="/client/faves">FAVORITES</a></li>
+            <li class="learn"><a href="/client/learn">LEARN</a></li>
+            <li class="about"><a href="/client/about">ABOUT</a></li>
         </ul>
 
     </nav>
 
     <main>
+        
         <section id="home">
-            <p>This is a test, this is ONLY a test....</p>
-
+            <aside style ="background-color:#000">
+            <iframe src="https://giphy.com/embed/EA4tMPoqsE6pq" width="1000" height="1000" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a href="https://giphy.com/gifs/mars-EA4tMPoqsE6pq" alt="gif of Mars, via GIPHY"></a>
+            </aside>
+        
         </section>
+
 
         <section id="photos">
 
             <div id="searchHowTo"></div>
-                <p>This is a test, this is ONLY a test....</p>
+                <!--This is a test, this is ONLY a test.... -->
         <fieldset>
-            <form id="dropDowns">
+            <form id="dropdowns">
                 <div id= "rovers">
                     <label>Rovers</label>
                         <select id="rover">
@@ -59,72 +72,98 @@
 
                 <div id= "dates">
                     <label>Date(yyyy-mm-dd)</label>
-                        <input type="text" name ="dateInput" required>
+                        <input id="date" type="text" name ="dateInput" required>
                 </div>
 
                 <button id ="searchButton" type="submit">SEARCH</button>
             </form>
         </fieldset>
 
-            <div id="gallery"><!-- this is where images will be appended--></div>
+            <div id="gallery-wrapper" class="imageBlock"> <!-- this is where images will be appended--> </div>
 
-            <form>
-                <label for="userName">Create Name</label>
-                <input type="text" name="userName" required>
-                <button id="saveFavs" type= "submit">SAVE</button>
-            </form>
+            
+            <label for="username">Create a username to save your favorite images.</label>
+            <input id = "user" type="text" name="username" required>
+            
+          
         </section>
 
         <section id="favePhotos">
-           <div id="userFaves">
-                <p>This is a test, this is ONLY a test....</p>
 
-               <form id="getFaves">
-                   <label for="userName">Your Name</label>
-                   <button id="view" type="submit">View</button>
-               </form>
+            <div id="userFaves">
+                <form id="getFaves">
+                    <label for="userName">Enter Your Name</label>
+                    <input id="userInput" type="text">
+                    <button id="view" type="submit">View</button>
+                </form>
             </div> 
-            <div id="topImages">
-                <form>
-                    <label for="topUserImages">Top Images</label>
-                    <button id="viewTopImages" type="submit">View Top Images</button>
-                </form>                  
-            </div> 
+
+            <div id="favorites-wrapper"> <!-- this is where images will be appended--> </div>    
+
         </section>
 
         <section id="learn">
-            <h1>All About MARS</h1>
-            <!-- <img src=http://id="timeline"/> -->
+            <h1>Facts about Mars and the Mars Rover</h1>
             <div class="faq_container">
                 <div class="faq">
-                    <div class="faq_question">Question goes here</div>
-                    <div class="faq_answer">Answer goes here</div>
-                    <div class="faq_question">Question goes here</div>
-                    <div class="faq_answer">Answer goes here</div>
-                    <div class="faq_question">Question goes here</div>
-                    <div class="faq_answer">Answer goes here</div>
-                    <div class="faq_question">Question goes here</div>
-                    <div class="faq_answer">Answer goes here</div>
-                    <div class="faq_question">Question goes here</div>
-                    <div class="faq_answer">Answer goes here</div>
+                    <p id="question">How long is one Mars year?</p>
+                    <p id="answer">A Mars DAY is called a sol.  One Mars sol is 24 hrs, 39 min and 35.244 seconds.  One Mars YEAR is 687 Earth days or 1.9 Earth years.</p>
+                    <p id="question">What is the temperature on Mars?</p>
+                    <p id="answer">The surface temperature of Mars is -153 to 20 degrees Celsius</p>
+                    <p id="question">Does Mars have a moon?</p>
+                    <p id="answer">Earth has one moon, but Mars has two.  Their names are Phobos and Deimos.</p>
+                    <p id="question">Does Mars have mountains?</p>
+                    <p id="answer">Yes!  Mars is the home of the tallest mountain in the Solar System, Olympus Mons.</p>
+                    <p id="question">When was Mars first discovered?</p>
+                    <p id="answer">Mars was first discovered by Egyptian astronomers in 2nd millineum BC.  (Between 2000BC  and 1001 BC).</p>
+                    <p id="question">How many missions have there been to Mars?</p>
+                    <p id="answer">There have been over 40 missions to Mars.  Only 18 have been successful.</p>
+                    <p id="question">What's something that is unique about the Mars rover?</p>
+                    <p id="answer">Lasers! On top of Curiosity’s “neck and head” is the ChemCam, which contains a laser capable of vaporizing items found on the Martian landscape — like rocks, soil, solids (or Martians) — from a distance of up to 23 feet. The vaporized substance is then analyzed to see if it is worth further study. ChemCam will help NASA “characterize” the geology of Mars, check for evidence of past habitability, assess the “biological potential” of parts of Mars, and determine whether or not the soil of Mars is toxic to Earthlings.</p>
+                    <p id="question">Is the Mars rover as fast as a jet?</p>
+                    <p id="answer">Nooooooo. Curiosity will have an average speed of between 0.00018 mph and 0.00073 mph. (1 1/2 to 6 miles a YEAR.) Even on a long day, Curiosity will only travel about 600 ft.</p>
+                    <p id="question">Is Curiosity powerful?</p>
+                    <p id="answer">Yes and no. The iPhone in your pocket has at least 4 times the computing power of Curiosity, which packs a mere 200MHz CPU, to iPhones 800MHz CPU. Further, Curiosity packs just 256MB of RAM, and 2GB of on-board storage space. The iPhone has 512MB of RAM and up to 64GB of storage. However, Curiosity has multiple computers in case one breaks, all of which are capable of withstanding massive amounts of radiation an iPhone would not survive.</p>
+                    <p id="question">"How did Curiosity get to Mars in the first place?"></p>
+                    <p id="answer">Curiosity has a rough journey to get to Mars and there is no guarantee it will arrive.  Below is a video of it's hard journey to Mars.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/uxVVgBAosqg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                    <p id="question">Does Curiosity have a birthday?</p>
+                    <p id="answer">Yes. Its birthday is on August 5, 2012.  For it's 1st Birthday, it sang itself a lonely birthday song.  Millions of Earthlings were sad Curiosity was all alone.  However, Curiosity runs on a nuclear battery that turns heat into electricity and it will eventually die.  In the scientific world, there is no value in songs, so it's vibration unit has been reprogrammed for scientific data collection.  If you would like to hear it sing Happy Birthday, watch the video below.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/h2I8AoB1xgU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
         <section id="about">
-            <h1>"About Team Nitrogen"</h1>
-            <div class="team">
-                <p id="Charlie">Charlie</p>
-                <img src=/>
-                <p id="Liz">Liz</p>
-                <img src=/>
-                <p id="Carmen">Carmen</p>
-                <img src=/>
-                <p id="Katlyn">Katlyn</p>
-                <img src=/>
-            </div>
-            <div class="bio"></div>
+            <h2>Team Nitrogen</h1>
+                <div class="bio-wrapper">
+                    <h3>Charlie Heiner</h2>
+                    <img src="https://media-exp2.licdn.com/mpr/mpr/AAEAAQAAAAAAAArIAAAAJDQ1ZWRkMTU1LTQ5NjEtNGUxMi05ZTA5LTE0MjQ4N2FhYWVjYg.jpg" alt = "black and white alien image"/>
+                    <p id="bio">I appreciate the Universe most by getting away from the city and into nature with my camera.  It's not as easy these days while learning to code with a new one at home, but my supportive, beautiful wife and two amazing children make it very worthwhile. The eclipse this year was such an incredible reminder of how vast the Universe really is.</p>
+                </div>
+
+                <div class="bio-wrapper">
+                    <h3>Liz Petersen</h2>
+                    <img src="https://i.pinimg.com/474x/f8/29/03/f82903b0aa0debc29bbbf75dcdec094d--mars-attacks-alien-art.jpg" alt = "cute alien holding cat"/>
+                    <p id="bio">When I was 11, I wanted to be an astronaut. That dream quickly changed with the onset of the teen years and a driver’s license. A graphic and web designer by training, I am currently studying software development at Alchemy Code Lab in Portland, OR. Hobbies include riding my motorcycle to beautiful places, nature photography, hiking, and camping. I'm a plant nerd, parent of one, and practitioner of mindful communication. The farthest reaches of space have continued to hold my interest, and I have been totally excited working on this project.</p>
+                </div>
+
+                <div class="bio-wrapper">
+                    <h3>Carmen Perezchica</h2>
+                    <img src="https://vignette.wikia.nocookie.net/phineasandferb/images/7/7a/Martians_and_rover.png/revision/latest?cb=20120102080004" alt = "Martians pointing at Mars rover"/>
+                    <p id="bio">Mars lover and enthusiast who has dreamed of blasting off planet Earth to Mars since the age of 3. If they open up applications to Elon Musk's Tesla trip to Mars, I will be the first to sign up myself, my husband and two stellar kids. My coding breaks often involve viewing photos of Mars.</p>
+                </div>
+
+                <div class="bio-wrapper">
+                    <h3>Katlyn Tucker</h2>
+                    <img src="http://wwwcdn.skyandtelescope.com/wp-content/uploads/mars_rover_journey_480px.jpg" alt = "Mars rover leaves a message in the Mars sand which spells out Mars"/>
+                    <p id="bio">I enjoy warping time and space while learning to speak in code. Although not an astronaut, I watched two space shuttle launches in person. I almost applied to the program to colonize Mars, but leaving behind my two teens, friends and family and never returning to Earth was the dealbreaker.  In my free time, I take photos, make jewelry and hang out with my kids, where we often sit and watch the Universe.</p>
+                </div>
 
         </section>
+
+        <footer>
+            <p>&copy 2017 | All Rights Reserved | Team Nitrogen | Mars app</p>
+        </footer>
 
 
 
