@@ -14,6 +14,29 @@ var app = app || {};
                 app.Image.fetchImages();
         })
        app.Image.all.map(image => $('#photos').append(image.toHtml()));
+    
+       $('.favImage').on('submit', function (event) {
+        event.preventDefault();
+        
+        const rover = $('#rover option:selected').text();
+        const img_id = $(this).find('img').attr('id');
+        const img_num = img_id.slice(1);
+        const src = $(this).find('img').attr('src');
+        
+        const image = {
+            image_id: img_num,
+            rover: rover,
+            camera: $('#camera option:selected').text(),
+            url: src,
+            user: $('#user').val()
+        }
+        
+        
+        // app.Image.saveImage();
+       
+    });
+    
+    
     };
 
     imageView.initHomePage = () => {
@@ -29,6 +52,9 @@ var app = app || {};
     imageView.initFavesPage = () => {
         $('main section').hide();
         $('#favePhotos').show();
+
+        
+      
     }
 
     imageView.initAboutPage = () => {
