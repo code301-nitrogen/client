@@ -1,7 +1,7 @@
 'use strict';
 var app = app || {};
 
-const API_URL = 'https://code-301-mars.herokuapp.com/';
+const API_URL = 'https://code-301-mars.herokuapp.com/v1';
 // const API_URL = 'http://localhost:3000/api/v1';
 
 (function (module) {
