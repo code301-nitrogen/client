@@ -41,10 +41,16 @@ const API_URL = 'http://localhost:3000/api/v1';
         .then(Image.loadAll)
         .fail(console.error);
         
+        console.log("this is in fetchFaves", Image.all);
+        
+
+        $('#favorites-wrapper').show();
+        
     }
     Image.loadFaves = (data) => {
         Image.faves = data.map(obj => new Image(obj));
         console.log(ImageFaves.all);
+        app.Image.faves.map(image => $('#favorites-wrapper').append(image.toHtml()));
     }
 
     Image.loadAll = (data) => {
