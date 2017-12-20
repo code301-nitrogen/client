@@ -56,7 +56,7 @@ const API_URL = 'https://code-301-mars.herokuapp.com/api/v1';
         console.log('this is in loadFaves', data);
         console.log('this is image.all in loadFaves', Image.all)
         $('#favorites-wrapper').empty();
-        app.Image.all.map(image => $('#favorites-wrapper').append(image.toHtml()));
+        app.Image.all.map(image => $('.imageBlock').append(image.toHtml()));
  
     }
 
