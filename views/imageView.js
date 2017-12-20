@@ -57,7 +57,10 @@ var app = app || {};
         $('main section').hide();
         $('#favePhotos').show();
 
-        // $('').on('submit')
+        $('#getFaves').on('submit', (e) => {
+            e.preventDefault();
+            app.Image.fetchFaves();
+        })
         
       
     }
