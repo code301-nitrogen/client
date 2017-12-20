@@ -1,12 +1,9 @@
-#header, #footer, #section {
-    width: 100%;
-    margin: 0 auto;
-}
-
 #home {
     background-color: #000000;
 }
 
-#discover {
+footer{
+    width: 100%;
+    margin: 0 auto;
+    }
     
-}

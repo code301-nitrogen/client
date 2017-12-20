@@ -1,12 +1,15 @@
-    /* Learn page styling */
-    #learn p#question {
-        font-family: 'Roboto', sans-serif;
-        font-style: bold;
-        font-size: 14px;
-        }
+/* Learn Page/FAQ styling */
+
+div.faq p#question {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #35aa06;
+    }
 
             /* Learn page styling */
-#learn p#answer {
+div.faq p#answer {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    color: rgb(37,57,79);
     }

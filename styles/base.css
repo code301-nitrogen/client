@@ -1,13 +1,37 @@
-html, body {
+body {
     margin: 0;
     padding: 0;
-    background-color: rgb(74, 98, 163);
+    background-color: #000000;
+    background-image: url('https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_05292015.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 h1 {
     font-family: 'Luckiest Guy', cursive;
-    font-size: 2.5em;
+    font-size: 2.3em;
+    color: rgb(228, 53, 9);
+    margin: 0;
+    padding-top: 50px;
+    padding-left: 100px;
+    position: fixed;
+    z-index: 1;
 } 
+
+h2 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.7em;
+}
+
+h3 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.3em;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
 
 a {
     text-decoration: none;
@@ -22,10 +46,4 @@ a {
 a.active {
     color: rgb(251, 153, 76);
     cursor: default;
-  }
-
-
-
-  img {
-
   }
