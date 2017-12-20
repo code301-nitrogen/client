@@ -64,20 +64,6 @@
     padding: 40px;
     /* align-items: flex-start; */
     }
-    
-    .imageBlock form {
-        display: block;
-        position: relative;
-        margin: 20px 0;
-        /* padding: 40px; */
-        /* background-position: center; */
-        background-size: cover;
-        background-color: #000000;
-        border-radius: 20px;
-        border: 2px solid rgb(74,98,163);
-        transition: box-shadow .3s ease-in-out;
-        overflow: hidden;
-}
 
 /* Container module for Favorites */
 
@@ -99,9 +85,21 @@
     text-align: center;
     border-radius: 20px;
     transition: box-shadow .3s ease-in-out;
+}
 
-    }
-
+.imageBlock form {
+    display: block;
+    position: relative;
+    margin: 20px 0;
+    /* padding: 40px; */
+    /* background-position: center; */
+    background-size: cover;
+    background-color: #000000;
+    border-radius: 20px;
+    border: 2px solid rgb(74,98,163);
+    transition: box-shadow .3s ease-in-out;
+    overflow: hidden;
+}
 
 /* LEARN page module     */
 

@@ -2,13 +2,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #000;
-
 }
 
 h1 {
-
     font-family: 'Carter One',cursive;
-
     font-size: 2.3em;
     color: rgb(228, 53, 9);
     margin: 10px 0;
@@ -19,17 +16,13 @@ h1 {
 } 
 
 h2 {
-
     font-family: 'Carter One', cursive;
-
     font-size: 1.7em;
 }
 
 h3 {
-
     font-family: 'Carter One', cursive;
     font-size: 1.3em;
-
 }
 
 p {
