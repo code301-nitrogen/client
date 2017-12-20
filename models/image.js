@@ -12,6 +12,7 @@ const API_URL = 'http://localhost:3000/api/v1';
         this.url = obj.url; 
 }
     Image.all = [];
+    Image.faves = [];
 
     Image.fetchImages = (cb) => {
         let camShort = '';
@@ -34,10 +35,26 @@ const API_URL = 'http://localhost:3000/api/v1';
         .fail(console.error);
     }
 
+    Image.fetchFaves = () =>{
+        Image.all = [];
+        $.get(`${API_URL}/favorites`)
+        .then(Image.loadAll)
+        .fail(console.error);
+        
+    }
+    Image.loadFaves = (data) => {
+        Image.faves = data.map(obj => new Image(obj));
+        console.log(ImageFaves.all);
+    }
+
     Image.loadAll = (data) => {
         Image.all = data.map(obj => new Image(obj));
         console.log(Image.all);
-        app.imageView.initDiscoverPage();
+        app.imageView.append();
+        Image.all = [];
+        
+        
+        // app.imageView.initDiscoverPage();
     }
 
     Image.saveImage = (image) =>{
