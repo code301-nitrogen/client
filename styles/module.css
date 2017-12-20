@@ -10,8 +10,8 @@
 
 .nav li {
     display: inline-block;
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 1em;
+    font-family: 'Carter One', cursive;
+    font-size: 18px;
     line-height: 40px;
     height: 40px;
     padding: 5px 10px;
@@ -33,53 +33,149 @@
     }
 
 
+/* Container module for Search form */
+
+#dropdowns {
+    display:block;
+    block-size: 40%;
+    background-color: rgb(251, 153, 76);
+    color: rgb(74,98,163);
+    border: 1px solid #000000;
+    float: left;
+    font-size: 1.3em;
+    font-weight:bold;
+    padding:50px;
+}
+
+#rovers, #camera, #dates, #searchButton {
+    text-align: right;
+    padding-bottom: 5px;
+}
+
 /* Container module for Gallery */
 
-    #gallery-wrapper {
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        padding: 40px 40px 100px 40px;
+#gallery-container {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: space-around;
+    padding: 40px;
+    /* align-items: flex-start; */
     }
-    
-    .imageBlock {
-        display: block;
-        position: relative;
-        width: 25%;
-        height: 200px;
-        margin: 20px 0;
-        padding: 40px;
-        background-position: center;
-        background-size: cover;
-        text-align: center;
-        border-radius: 20px;
-        transition: box-shadow .3s ease-in-out;
-    }
+
+    /* .gallery-item:nth-child(1) { */
+        /* order: 0; */
+        /* flex: 0 1 auto; */
+        /* align-self: flex-start; */
+        /* width: 25%; */
+        /* height: 200px; */
+        /* border: 1px solid #000000; */
+        /* border-radius: 10px; */
+        /* } */
+/*  */
+    /* .gallery-item:nth-child(2) { */
+        /* order: 0; */
+        /* flex: 0 1 auto; */
+        /* align-self: auto; */
+        /* width: 25%; */
+        /* height: 200px; */
+        /* border: 1px solid #000000; */
+        /* border-radius: 10px; */
+        /* } */
+/*  */
+    /* .gallery-item:nth-child(3) { */
+        /* order: 0; */
+        /* flex: 0 1 auto; */
+        /* align-self: auto; */
+        /* width: 25%; */
+        /* height: 200px; */
+        /* background-color: #fff; */
+        /* border: 1px solid #000000; */
+        /* border-radius: 10px; */
+        /* } */
+/*  */
+    /* .gallery-item:nth-child(4) { */
+        /* order: 0; */
+        /* flex: 0 1 auto; */
+        /* align-self: auto; */
+        /* width: 25%; */
+        /* height: 200px; */
+        /* background-color: #fff; */
+        /* border: 1px solid #000000; */
+        /* border-radius: 10px; */
+        /* } */
+/*  */
+    /* .gallery-item:nth-child(5) { */
+        /* order: 0; */
+        /* flex: 0 1 auto; */
+        /* align-self: auto; */
+        /* width: 25%; */
+        /* height: 200px; */
+        /* background-color: #fff; */
+        /* border: 1px solid #000000; */
+        /* border-radius: 10px; */
+        /* } */
+/*  */
+    /* .gallery-item:nth-child(6) { */
+        /* order: 0; */
+        /* flex: 0 1 auto; */
+        /* align-self: auto; */
+        /* width: 25%; */
+        /* height: 200px; */
+        /* background-color: #fff; */
+        /* border: 1px solid #000000; */
+        /* border-radius: 10px; */
+    /* } */
+    /* #gallery-wrapper { */
+        /* position: relative; */
+        /* display: flex; */
+        /* justify-content: space-around; */
+        /* flex-wrap: wrap; */
+        /* padding: 40px 40px 100px 40px; */
+    /* } */
+    /*  */
+    /* .imageBlock { */
+        /* display: block; */
+        /* position: relative; */
+        /* width: 25%; */
+        /* height: 200px; */
+        /* margin: 20px 0; */
+        /* padding: 40px; */
+        /* background-position: center; */
+        /* background-size: cover; */
+        /* text-align: center; */
+        /* border-radius: 20px; */
+        /* transition: box-shadow .3s ease-in-out; */
+    /* } */
 
     /* Container module for Favorites */
 
-    #favorites-wrapper {
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        padding: 40px 40px 100px 40px;
-    }
+    /* #gallery-container { */
+        /* position: relative; */
+        /* display: flex; */
+        /* justify-content: space-around; */
+        /* flex-wrap: wrap; */
+        /* padding: 40px 40px 100px 40px; */
+        /* text-align: center; */
+    /* } */
     
-    .imageBlock {
+    .gallery-item {
         display: block;
         position: relative;
         width: 25%;
         height: 200px;
         margin: 20px 0;
         padding: 40px;
-        background-position: center;
+        /* background-position: center; */
         background-size: cover;
-        text-align: center;
+        background-color: #000000;
         border-radius: 20px;
+        border: 2px solid rgb(74,98,163);
         transition: box-shadow .3s ease-in-out;
     }
+
+
 /* LEARN page module     */
 
 div.faq_container {

@@ -13,16 +13,10 @@ var app = app || {};
                 e.preventDefault();
                 app.Image.fetchImages();
         })
-       
-        
-       
-    
-    
 };
     imageView.append = () => {
-
-        $('#gallery-wrapper').empty();
-        app.Image.all.map(image => $('#gallery-wrapper').append(image.toHtml()));
+        $('#gallery-container').empty();
+        app.Image.all.map(image => $('#gallery-item').append(image.toHtml()));
         $('.favImage').on('submit', function (event) {
             event.preventDefault();
             
