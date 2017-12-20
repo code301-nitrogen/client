@@ -37,7 +37,11 @@ const API_URL = 'http://localhost:3000/api/v1';
     Image.loadAll = (data) => {
         Image.all = data.map(obj => new Image(obj));
         console.log(Image.all);
-        app.imageView.initDiscoverPage();
+        app.imageView.append();
+        Image.all = [];
+        
+        
+        // app.imageView.initDiscoverPage();
     }
 
     Image.saveImage = (image) =>{

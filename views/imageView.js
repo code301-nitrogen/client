@@ -13,32 +13,35 @@ var app = app || {};
                 e.preventDefault();
                 app.Image.fetchImages();
         })
-       app.Image.all.map(image => $('#gallery-wrapper').append(image.toHtml()));
-    
-       $('.favImage').on('submit', function (event) {
-        event.preventDefault();
-        
-        const rover = $('#rover option:selected').text();
-        const img_id = $(this).find('img').attr('id');
-        const img_num = img_id.slice(1);
-        const src = $(this).find('img').attr('src');
-        
-        const image = {
-            image_id: img_num,
-            rover: rover,
-            camera: $('#camera option:selected').text(),
-            url: src,
-            user: $('#user').val()
-        }
-
-        
-        
-        app.Image.saveImage(image);
        
-    });
+        
+       
     
     
-    };
+};
+    imageView.append = () => {
+
+        $('#gallery-wrapper').empty();
+        app.Image.all.map(image => $('#gallery-wrapper').append(image.toHtml()));
+        $('.favImage').on('submit', function (event) {
+            event.preventDefault();
+            
+            const rover = $('#rover option:selected').text();
+            const img_id = $(this).find('img').attr('id');
+            const img_num = img_id.slice(1);
+            const src = $(this).find('img').attr('src');
+            
+            const image = {
+                image_id: img_num,
+                rover: rover,
+                camera: $('#camera option:selected').text(),
+                url: src,
+                user: $('#user').val()
+            }
+            app.Image.saveImage(image);
+           
+        });
+    }
 
     imageView.initHomePage = () => {
         $('main section').hide();
@@ -54,6 +57,7 @@ var app = app || {};
         $('main section').hide();
         $('#favePhotos').show();
 
+        // $('').on('submit')
         
       
     }
