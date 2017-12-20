@@ -38,7 +38,10 @@ const API_URL = 'http://localhost:3000/api/v1';
     Image.fetchFaves = () =>{
         
         Image.all = [];
-        $.get(`${API_URL}/favorites`)
+        const user = {
+            user: $('#userInput').val()
+        }
+        $.get(`${API_URL}/favorites`, user)
         .then(Image.loadFaves)
         .fail(console.error);
         
