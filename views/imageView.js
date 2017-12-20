@@ -13,7 +13,7 @@ var app = app || {};
                 e.preventDefault();
                 app.Image.fetchImages();
         })
-       app.Image.all.map(image => $('#photos').append(image.toHtml()));
+       app.Image.all.map(image => $('#gallery-wrapper').append(image.toHtml()));
     
        $('.favImage').on('submit', function (event) {
         event.preventDefault();

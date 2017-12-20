@@ -37,10 +37,14 @@
     </nav>
 
     <main>
-        <section id="home">
-            <iframe src="https://giphy.com/embed/EA4tMPoqsE6pq" width="600" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/mars-EA4tMPoqsE6pq" alt="gif of Mars, via GIPHY"></a></p>
+        
+            <section id="home">
+                <aside style ="background-color:#000">
+                <iframe src="https://giphy.com/embed/EA4tMPoqsE6pq" width="1000" height="1000" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a href="https://giphy.com/gifs/mars-EA4tMPoqsE6pq" alt="gif of Mars, via GIPHY"></a>
+                </aside>
+        
+            </section>
 
-        </section>
 
         <section id="photos">
 
@@ -75,10 +79,10 @@
             </form>
         </fieldset>
 
-            <div id="gallery"><!-- this is where images will be appended--></div>
+            <div id="gallery-wrapper"><!-- this is where images will be appended--></div>
 
             
-            <label for="username">Save your favorite images! Create a username</label>
+            <label for="username">Create a username to save your favorite images.</label>
             <input id = "user" type="text" name="username" required>
             
           
@@ -90,6 +94,7 @@
 
                <form id="getFaves">
                    <label for="userName">Your Name</label>
+                   <input type="text">
                    <button id="view" type="submit">View</button>
                </form>
             </div> 
