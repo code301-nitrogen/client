@@ -6,7 +6,7 @@
     padding: 0;
     margin: 0px auto;
     background-color: #000000;
-  }
+    }
 
 .nav li {
     display: inline-block;
@@ -15,25 +15,25 @@
     line-height: 40px;
     height: 40px;
     padding: 5px 10px;
-  }
+    }
    
 .nav a {
     text-decoration: none;
     color: rgb(251, 153, 76);
     display: block;
-  }
+    }
    
 .nav a:hover {
     color: rgb(228, 53, 9);
-  }
+    }
    
 .nav a.active {
     color: rgb(251, 153, 76);
     cursor: default;
-  }
+    }
 
 
-/* Container module */
+/* Container module for Gallery */
 
 .flex-container {
     display: inline-flex;
@@ -78,4 +78,19 @@
     order: 0;
     flex: 0 1 auto;
     align-self: auto;
+    }
+
+/* LEARN page module     */
+
+div.faq_container {
+    background-color: #ffffff;
+    background-size: cover;
+    opacity: 0.8;
+    width: 80%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1000px;
+    padding-top: 100px;
+    padding-left: 150px;
     }
