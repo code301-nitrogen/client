@@ -15,8 +15,8 @@ var app = app || {};
         })
 };
     imageView.append = () => {
-        $('#gallery-container').empty();
-        app.Image.all.map(image => $('#gallery-container').append(image.toHtml()));
+        $('#gallery-wrapper').empty();
+        app.Image.all.map(image => $('#gallery-wrapper').append(image.toHtml()));
         $('.favImage').on('submit', function (event) {
             event.preventDefault();
             
