@@ -16,7 +16,7 @@ var app = app || {};
 };
     imageView.append = () => {
         $('#gallery-container').empty();
-        app.Image.all.map(image => $('#gallery-item').append(image.toHtml()));
+        app.Image.all.map(image => $('.gallery-item').append(image.toHtml()));
         $('.favImage').on('submit', function (event) {
             event.preventDefault();
             
