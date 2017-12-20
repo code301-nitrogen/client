@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    
+}
+
+h1 {
+
+    font-family: 'Carter+One',cursive;
+
+    font-size: 2.3em;
+    color: rgb(228, 53, 9);
+    margin: 0;
+    padding-top: 50px;
+    padding-left: 100px;
+    position: absolute;
+    z-index: 1;
+} 
+
+h2 {
+
+    font-family: 'Carter One', cursive;
+
+    font-size: 1.7em;
+}
+
+h3 {
+
+    font-family: 'Carter One', cursive;
+    font-size: 1.3em;
+
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(251, 153, 76);
+    display: block;
+  }
+   
+a:hover {
+    color: rgb(228, 53, 9);
+  }
+   
+a.active {
+    color: rgb(251, 153, 76);
+    cursor: default;
+  }
