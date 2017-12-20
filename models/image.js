@@ -40,7 +40,7 @@ const API_URL = 'http://localhost:3000/api/v1';
         $.get(`${API_URL}/favorites`)
         .then(Image.loadAll)
         .fail(console.error);
-
+        
     }
     Image.loadFaves = (data) => {
         Image.faves = data.map(obj => new Image(obj));
