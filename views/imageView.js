@@ -55,14 +55,14 @@ var app = app || {};
             e.preventDefault();
             app.Image.fetchFaves();
         })
-        
-      
     }
 
     imageView.initAboutPage = () => {
         $('main section').hide();
         $('#about').show();
     }
+
     module.imageView = imageView;
+    
 })(app);
 
