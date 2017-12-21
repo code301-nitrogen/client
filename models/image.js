@@ -36,7 +36,6 @@ const API_URL = 'https://code-301-mars.herokuapp.com/api/v1';
     }
 
     Image.fetchFaves = () =>{
-        
         Image.all = [];
         const user = {
             user: $('#userInput').val()
@@ -44,17 +43,11 @@ const API_URL = 'https://code-301-mars.herokuapp.com/api/v1';
         $.get(`${API_URL}/favorites`, user)
         .then(Image.loadFaves)
         .fail(console.error);
-        
-        console.log("this is in fetchFaves", Image.all);
-        
-
         $('#favorites-wrapper').show();
-        
     }
+
     Image.loadFaves = (data) => {
         Image.all = data.map(obj => new Image(obj));
-        console.log('this is in loadFaves', data);
-        console.log('this is image.all in loadFaves', Image.all)
         $('#favorites-wrapper').empty();
         app.Image.all.map(image => $('#favorites-wrapper').append(image.toHtml()));
  
@@ -62,7 +55,6 @@ const API_URL = 'https://code-301-mars.herokuapp.com/api/v1';
 
     Image.loadAll = (data) => {
         Image.all = data.map(obj => new Image(obj));
-        console.log('this is in loadAll', Image.all);
         app.imageView.append();
         Image.all = [];
     }
